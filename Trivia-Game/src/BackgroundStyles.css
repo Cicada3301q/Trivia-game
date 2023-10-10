@@ -1,0 +1,16 @@
+body {
+    /* Set the background image */
+    background-image: url('https://as2.ftcdn.net/v2/jpg/05/59/13/39/1000_F_559133954_0kKDwhaWzU2ltOH4ylCkP1B4f7N6XkPD.jpg');
+    /* Adjust other background properties as needed */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
+  }
+
+  h1 {
+    text-align: center;
+    color: #ffffff; /* Text color (white) */
+    font-size: 36px; /* Adjust font size as needed */
+    padding: 20px; /* Add padding to create space around the text */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background color */
+  }
