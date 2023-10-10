@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './BackgroundStyles.css';
+import "./BackgroundStyles.css";
 import { Button, Stack } from "@mui/material";
 import "./App.css";
 
@@ -16,7 +16,12 @@ function App() {
   return (
     <div>
       <h1>Information Security Trivia!</h1>
-      <Stack spacing={2}>
+      <Stack
+        direction="column"
+        justifyContent="center"
+        alignItems="center"
+        spacing={2}
+      >
         {options.map((option) => (
           <Button
             size="medium"
