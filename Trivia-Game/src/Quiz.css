@@ -1,0 +1,76 @@
+.quiz-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .quiz-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 40px;
+    background-color: #fff; /* Background color for the quiz content */
+    border-radius: 10px; /* Rounded corners for the content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+  
+  h2 {
+    font-size: 28px; /* Larger font size for the question */
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 18px; /* Larger font size for options */
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+  }
+  
+  button.selected {
+    background-color: #28a745; /* Color for selected answer */
+  }
+  
+  p {
+    font-size: 18px; /* Font size for messages */
+    margin-top: 20px;
+  }
+  
+  button.next-btn {
+    margin-top: 20px;
+    padding: 12px 40px;
+    font-size: 18px;
+    background-color: #17a2b8; /* Next button background color */
+  }
+
+  .counter {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .counter p {
+    font-size: 18px;
+    margin: 5px;
+  }
+  
+  .counter p.correct {
+    color: #28a745; /* Green color for correct guess counter */
+  }
+  
+  .counter p.incorrect {
+    color: #dc3545; /* Red color for incorrect guess counter */
+  }

@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import './Quiz.css';
 
 function Quiz({ quizData }) {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [message, setMessage] = useState('');
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [correctCount, setCorrectCount] = useState(0); // Counter for correct guesses
+  const [incorrectCount, setIncorrectCount] = useState(0);
 
   // Shuffle the quizData to randomize question order (only on initial load)
   useEffect(() => {
@@ -23,8 +26,10 @@ function Quiz({ quizData }) {
   const handleAnswerClick = (option, correctAnswer) => {
     if (option === correctAnswer) {
       setMessage('Correct!');
+      setCorrectCount(correctCount + 1); // Increment correct count
     } else {
-      setMessage('Incorrect. Try again.');
+      setMessage('Sorry, the correct answer was ' + correctAnswer);
+      setIncorrectCount(incorrectCount + 1); // Increment incorrect count
     }
     setSelectedAnswer(option);
   };
@@ -47,9 +52,9 @@ function Quiz({ quizData }) {
   const currentQuestion = quizData[currentQuestionIndex];
 
   return (
-    <div>
+    <div className="quiz-container">
       {currentQuestion && (
-        <div>
+        <div className="quiz-content">
           <h2>{currentQuestion.questionText}</h2>
           <ul>
             {currentQuestion.options.map((option, optionIndex) => (
@@ -68,6 +73,10 @@ function Quiz({ quizData }) {
           </ul>
           {message && <p>{message}</p>}
           <button onClick={handleNextQuestion}>Next Question</button>
+          <div className="counter">
+            <p className="correct">Correct Guesses: {correctCount}</p>
+            <p className="incorrect">Incorrect Guesses: {incorrectCount}</p>
+          </div>
         </div>
       )}
     </div>
