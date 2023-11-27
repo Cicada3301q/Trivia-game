@@ -7,6 +7,7 @@ function Quiz({ quizData }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [correctCount, setCorrectCount] = useState(0); // Counter for correct guesses
   const [incorrectCount, setIncorrectCount] = useState(0);
+  const [pointCount, setPointCount] = useState(0);
 
   // Shuffle the quizData to randomize question order (only on initial load)
   useEffect(() => {
@@ -23,10 +24,12 @@ function Quiz({ quizData }) {
     return shuffledData;
   };
 
-  const handleAnswerClick = (option, correctAnswer) => {
+  const handleAnswerClick = (option, correctAnswer, points) => {
     if (option === correctAnswer) {
       setMessage('Correct!');
       setCorrectCount(correctCount + 1); // Increment correct count
+      //setPointCount(pointCount + 100); // Increment point count by fixed temp amount
+      setPointCount(pointCount + points); // Increment point count by question points
     } else {
       setMessage('Sorry, the correct answer was ' + correctAnswer);
       setIncorrectCount(incorrectCount + 1); // Increment incorrect count
@@ -61,7 +64,7 @@ function Quiz({ quizData }) {
               <li key={optionIndex}>
                 <button
                   onClick={() =>
-                    handleAnswerClick(option, currentQuestion.correctAnswer)
+                    handleAnswerClick(option, currentQuestion.correctAnswer, currentQuestion.points)
                   }
                   className={selectedAnswer === option ? 'selected' : ''}
                   disabled={selectedAnswer !== null}
@@ -76,6 +79,7 @@ function Quiz({ quizData }) {
           <div className="counter">
             <p className="correct">Correct Guesses: {correctCount}</p>
             <p className="incorrect">Incorrect Guesses: {incorrectCount}</p>
+            <p className="points">Your Score: {pointCount}</p>
           </div>
         </div>
       )}

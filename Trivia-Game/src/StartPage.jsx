@@ -11,6 +11,8 @@ function App() {
       { label: "Passwords", category: "/Passwords" },
       { label: "Authentication", category: "/Authentications" },
       { label: "Malware", category: "/Malware" },
+      { label: "Digital Signatures", category: "/Digital-Signatures" },
+      { label: "Public Key Infrastructure", category: "/PKI" },
     ];
   
     return (
