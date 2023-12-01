@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./BackgroundStyles.css";
 import { Button, Stack } from "@mui/material";
 import * as ReactDOM from "react-dom";
+import PKIImage from './assets/PKI-1000.png';
 import Quiz from "./Quiz";
 // import Test from "./Test";
 import {
@@ -147,6 +148,7 @@ function App() {
       options: ["Certified Agency CA Secured Server", "Corporate Certification Agency Root CA", "freesoftware.com", "Good Canadian Security Inc. Certification Authority"],
       correctAnswer: "Corporate Certification Agency Root CA",
       category: "PKI",
+      image: PKIImage,
       points: 1000,
     },
   ]

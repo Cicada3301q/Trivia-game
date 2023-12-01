@@ -13,6 +13,12 @@
     border-radius: 10px; /* Rounded corners for the content */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
   }
+
+.question-image {
+  display: block;
+  margin: 0 auto 20px; /* Add margin to create space between image and question */
+  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+}
   
   h2 {
     font-size: 28px; /* Larger font size for the question */
@@ -78,3 +84,19 @@
   .counter p.score {
     color: #000000; /* Black color for point counter */
   }
+
+  /* Styles for the score screen */
+.score-screen {
+  text-align: center;
+  max-width: 500px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.score-screen h2 {
+  margin-bottom: 10px;
+  color: #e74c3c;
+}

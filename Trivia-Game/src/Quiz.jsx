@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Quiz.css';
 
 function Quiz({ quizData }) {
@@ -8,11 +9,14 @@ function Quiz({ quizData }) {
   const [correctCount, setCorrectCount] = useState(0); // Counter for correct guesses
   const [incorrectCount, setIncorrectCount] = useState(0);
   const [pointCount, setPointCount] = useState(0);
+  const [gameEnded, setGameEnded] = useState(false);
+  const maxIncorrectGuesses = 3;
 
   // Shuffle the quizData to randomize question order (only on initial load)
   useEffect(() => {
     shuffleQuizData();
   }, []);
+  
 
   // Shuffle the quizData array
   const shuffleQuizData = () => {
@@ -33,8 +37,16 @@ function Quiz({ quizData }) {
     } else {
       setMessage('Sorry, the correct answer was ' + correctAnswer);
       setIncorrectCount(incorrectCount + 1); // Increment incorrect count
+      if (incorrectCount + 1 === maxIncorrectGuesses) {
+        // If the player reaches the maximum incorrect guesses, trigger end of the game
+        endGame();
+      }
     }
     setSelectedAnswer(option);
+  };
+
+  const endGame = () => {
+    setGameEnded(true); // Add this state using useState
   };
 
   const handleNextQuestion = () => {
@@ -56,8 +68,11 @@ function Quiz({ quizData }) {
 
   return (
     <div className="quiz-container">
-      {currentQuestion && (
+      {currentQuestion && !gameEnded && (
         <div className="quiz-content">
+          {currentQuestion.image && (
+            <img src={currentQuestion.image} alt="Question" className="question-image" />
+          )}
           <h2>{currentQuestion.questionText}</h2>
           <ul>
             {currentQuestion.options.map((option, optionIndex) => (
@@ -81,6 +96,18 @@ function Quiz({ quizData }) {
             <p className="incorrect">Incorrect Guesses: {incorrectCount}</p>
             <p className="points">Your Score: {pointCount}</p>
           </div>
+        </div>
+      )}
+  
+      {/* Rendering the score screen when gameEnded is true */}
+      {gameEnded && (
+        <div className="score-screen">
+          <h2>Game Over</h2>
+          <p>Your Final Score: {pointCount}</p>
+          <button onClick={() => setGameEnded(false)}>Continue Playing in Study Mode?</button>
+          <Link to="/">
+            <button>Category Select</button>
+          </Link>
         </div>
       )}
     </div>
