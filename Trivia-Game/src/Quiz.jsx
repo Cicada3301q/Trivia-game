@@ -10,6 +10,8 @@ function Quiz({ quizData }) {
   const [incorrectCount, setIncorrectCount] = useState(0);
   const [pointCount, setPointCount] = useState(0);
   const [gameEnded, setGameEnded] = useState(false);
+  const [incorrectSelection, setIncorrectSelection] = useState(false);
+
   const maxIncorrectGuesses = 3;
 
   // Shuffle the quizData to randomize question order (only on initial load)
@@ -37,6 +39,8 @@ function Quiz({ quizData }) {
     } else {
       setMessage('Sorry, the correct answer was ' + correctAnswer);
       setIncorrectCount(incorrectCount + 1); // Increment incorrect count
+      // Set a flag to indicate incorrect selection for this question
+      setIncorrectSelection(true);
       if (incorrectCount + 1 === maxIncorrectGuesses) {
         // If the player reaches the maximum incorrect guesses, trigger end of the game
         endGame();
@@ -81,7 +85,15 @@ function Quiz({ quizData }) {
                   onClick={() =>
                     handleAnswerClick(option, currentQuestion.correctAnswer, currentQuestion.points)
                   }
-                  className={selectedAnswer === option ? 'selected' : ''}
+                  className={
+                    selectedAnswer === option
+                      ? option === currentQuestion.correctAnswer
+                        ? 'correct selected'
+                        : incorrectSelection && selectedAnswer === option
+                        ? 'incorrect selected'
+                        : 'selected'
+                      : ''
+                  }
                   disabled={selectedAnswer !== null}
                 >
                   {option}
@@ -89,7 +101,7 @@ function Quiz({ quizData }) {
               </li>
             ))}
           </ul>
-          {message && <p>{message}</p>}
+          {message && <p className="message">{message}</p>}
           <button onClick={handleNextQuestion}>Next Question</button>
           <div className="counter">
             <p className="correct">Correct Guesses: {correctCount}</p>
