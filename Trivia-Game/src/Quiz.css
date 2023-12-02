@@ -19,6 +19,13 @@
   margin: 0 auto 20px; /* Add margin to create space between image and question */
   max-width: 100%; /* Ensure the image doesn't exceed its container's width */
 }
+
+/* Style for the question */
+.question-text {
+  border: 2px solid #333333; /* Border style */
+  padding: 10px; /* Padding inside the border */
+  border-radius: 5px; /* Rounded corners */
+}
   
   h2 {
     font-size: 28px; /* Larger font size for the question */

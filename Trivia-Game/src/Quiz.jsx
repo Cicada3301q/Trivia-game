@@ -77,7 +77,7 @@ function Quiz({ quizData }) {
           {currentQuestion.image && (
             <img src={currentQuestion.image} alt="Question" className="question-image" />
           )}
-          <h2>{currentQuestion.questionText}</h2>
+          <h2 className="question-text">{currentQuestion.questionText}</h2>
           <ul>
             {currentQuestion.options.map((option, optionIndex) => (
               <li key={optionIndex}>
