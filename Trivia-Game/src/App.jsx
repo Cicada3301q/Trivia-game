@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./BackgroundStyles.css";
 import { Button, Stack } from "@mui/material";
 import * as ReactDOM from "react-dom";
-import PKIImage from './assets/PKI-1000.png';
 import Quiz from "./Quiz";
 // import Test from "./Test";
 import {
@@ -13,6 +12,47 @@ import {
 import "./App.css";
 import StartPage from "./StartPage";
 //import { BrowserRouter, Route, Link, Switch} from "react-router-dom";
+
+// Image Imports from ./assets
+import CD100 from './assets/CD-100.jpg';
+import CD100_2 from './assets/CD-100-2.jpg';
+import CD200 from './assets/CD-200.jpg';
+import CD300 from './assets/CD-300.jpg';
+import CD400 from './assets/CD-400.gif';
+import CD500 from './assets/CD-500.jpg';
+import CD500_2 from './assets/CD-500-2.jpg';
+
+import Crypto100 from './assets/Crypto-100.jpg';
+import Crypto100_2 from './assets/Crypto-100-2.jpg';
+import Crypto200 from './assets/Crypto-200.jpg';
+import Crypto200_2 from './assets/Crypto-200-2.jpg';
+import Crypto400_2 from './assets/Crypto-400-2.jpg';
+import Crypto800 from './assets/Crypto-800.jpg';
+import Crypto800_2 from './assets/Crypto-800-2.jpg';
+import Crypto1000 from './assets/Crypto-1000.jpg';
+import Crypto1000_2 from './assets/Crypto-1000-2.jpg';
+
+import Linux100 from './assets/Linux-100.jpg';
+import Linux200 from './assets/Linux-200.jpg';
+import Linux200_2 from './assets/Linux-200-2.png';
+import Linux400 from './assets/Linux-400.jpg';
+import Linux800 from './assets/Linux-800.jpg';
+
+import Malware200 from './assets/Malware-200.jpg';
+import Malware400 from './assets/Malware-400.webp';
+import Malware800 from './assets/Malware-800.jpg';
+import Malware800_2 from './assets/Malware-800-2.jpg';
+import Malware1000 from './assets/Malware-1000.jpg';
+
+import Web100 from './assets/Web-100.jpg';
+import Web100_2 from './assets/Web-100-2.jpg';
+import Web200_2 from './assets/Web-200-2.jpg';
+import Web400 from './assets/Web-400.jpeg';
+import Web400_2 from './assets/Web-400-2.jpg';
+import Web1000 from './assets/Web-1000.jpg';
+import Web1000_2 from './assets/Web-1000-2.jpg';
+
+import PKI1000 from './assets/PKI-1000.png';
 
 function App() {
 
@@ -87,7 +127,7 @@ function App() {
       options: ["Certified Agency CA Secured Server", "Corporate Certification Agency Root CA", "freesoftware.com", "Good Canadian Security Inc. Certification Authority"],
       correctAnswer: "Corporate Certification Agency Root CA",
       category: "PKI",
-      image: PKIImage,
+      image: PKI1000,
       points: 1000,
     },
 
@@ -100,14 +140,16 @@ function App() {
     correctAnswer: "1",
     category: "Computer Representation of Data",
     points: 100,
+    image: CD100,
     },
 
     { 
     questionText: "What does the 0b prefix indicate? It indicates that the number  ______ .", 
     options: ["can be converted into binary numbers", "is written in binary", "is made up of bytes", "must consist of natural numbers"], 
-    correctAnswer: " is written in binary",
+    correctAnswer: "is written in binary",
     category: "Computer Representation of Data",
     points: 100,
+    image: CD100_2,
     },
 
     { 
@@ -116,6 +158,7 @@ function App() {
     correctAnswer: "the rightmost bit is odd",
     category: "Computer Representation of Data", 
     points: 200,
+    image: CD200,
     },
 
     { 
@@ -124,6 +167,7 @@ function App() {
     correctAnswer: "quartet",
     category: "Computer Representation of Data", 
     points: 300,
+    image: CD300,
     },
 
     { 
@@ -132,6 +176,7 @@ function App() {
     correctAnswer: "0b1000110011",
     category: "Introduction to Cryptography", 
     points: 400,
+    image: CD400,
     },
 
     { 
@@ -140,6 +185,7 @@ function App() {
     correctAnswer: "9",
     category: "Introduction to Cryptography", 
     points: 500,
+    image: CD500,
     },
 
 
@@ -149,6 +195,7 @@ function App() {
     correctAnswer: "cherry",
     category: "Introduction to Cryptography", 
     points: 500,
+    image: CD500_2,
     }
 
   ]
@@ -827,6 +874,7 @@ const MockDataLinux = [
     correctAnswer: "Operating System",
     category: "Linux File Permissions",
     points: 100,
+    image: Linux100,
     },
     {
     questionText: "Which of the following operating systems is NOT based on UNIX?",
@@ -834,6 +882,7 @@ const MockDataLinux = [
     correctAnswer: "Windows",
     category: "Linux File Permissions",
     points: 400,
+    image: Linux400,
     },
     {
     questionText: "In Linux, what is the username of the superuser or administrator, whose user ID is typically set to 0, granting unparalleled control over the system, allowing tasks such as reconfiguring the computer, reading/writing/deleting any file, becoming any other user, and resetting passwords?",
@@ -841,6 +890,7 @@ const MockDataLinux = [
     correctAnswer: "Root",
     category: "Linux File Permissions",
     points: 200,
+    image: Linux200,
     },
     {
     questionText: "What term is used to describe weak applications intentionally designed to attract hackers for studying their behaviors?",
@@ -848,6 +898,7 @@ const MockDataLinux = [
     correctAnswer: "Honeypot",
     category: "Linux Security Mechanisms",
     points: 200,
+    image: Linux200_2,
     },
     {
     questionText: "What security principle aims to ensure that misbehaving users and/or applications cannot harm the rest of the system by physically or logically separating them from each other?",
@@ -855,6 +906,7 @@ const MockDataLinux = [
     correctAnswer: "Confinement",
     category: "Linux Security Mechanisms",
     points: 800,
+    image: Linux800,
     },
     {
     questionText: "In computer security, what component mediates requests from applications, implements protection policies, and enforces isolation and confinement?",
@@ -873,6 +925,7 @@ const MockDataMalware = [
     correctAnswer: "Open Design",
     category: "Saltzer and Shroeder Design Principles",
     points: 800,
+    image: Malware800,
     },
     {
     questionText: "What principle underscores the importance of designing a human interface for ease of use, ensuring that users consistently and automatically apply protection mechanisms correctly?",
@@ -881,6 +934,7 @@ const MockDataMalware = [
     correctAnswer: "Psychological Acceptability",
     category: "Saltzer and Shroeder Design Principles",
     points: 1000,
+    image: Malware1000,
     },
     {
     questionText: "What term is used to describe a dormant payload within a computer system that activates when a specific condition is met, often without the knowledge of the computer owner?",
@@ -888,6 +942,7 @@ const MockDataMalware = [
     correctAnswer: "Logic Bomb",
     category: "Malware",
     points: 200,
+    image: Malware200,
     },
     {
     questionText: "What type of malicious software is designed to gather information about users' activities and transmit that data to a third party?",
@@ -902,6 +957,7 @@ const MockDataMalware = [
     correctAnswer: "Ransomware",
     category: "Malware",
     points: 400,
+    image: Malware400,
     },
     {
     questionText: "What approach to virus detection involves maintaining a list of known viruses and storing specific characteristics, such as infection code and payload code, for each virus?",
@@ -909,6 +965,7 @@ const MockDataMalware = [
     correctAnswer: "Signature-based Detection",
     category: "Malware",
     points: 800,
+    image: Malware800_2,
     },
 ]
 
@@ -919,6 +976,7 @@ const MockDataWebSecurity = [
     correctAnswer: "To harvest sensitive information like usernames and passwords",
     category: "Attacks despite HTTPS",
     points: 100,
+    image: Web100,
     },
     {
     questionText: "How does typosquatting typically exploit a users mistakes?",
@@ -933,6 +991,7 @@ const MockDataWebSecurity = [
     correctAnswer: "Sniffing unencrypted connections on existing WiFi or wired hubs",
     category: "Attacks despite HTTPS",
     points: 400,
+    image: Web400,
     },
     {
     questionText: "What technology is employed in the implementation of Certificate Transparency, offering earlier detection of compromised CAs?",
@@ -948,6 +1007,7 @@ const MockDataWebSecurity = [
     correctAnswer: "Knows the client's full identity",
     category: "Attacks despite HTTPS",
     points: 1000,
+    image: Web1000,
     },
     {
     questionText: "How can attackers exploit sandbox bugs or kernel exploits in JavaScript?",
@@ -955,6 +1015,7 @@ const MockDataWebSecurity = [
     correctAnswer: "By gaining privileged access and controlling the system",
     category: "Web security",
     points: 100,
+    image: Web100_2,
     },
     {
     questionText: "Which type of XSS attack involves malicious input stored in the website database and served to all clients?",
@@ -962,6 +1023,7 @@ const MockDataWebSecurity = [
     correctAnswer: "Persistent XSS",
     category: "Web security",
     points: 200,
+    image: Web200_2,
     },
     {
     questionText: "Which type of XSS attack involves malicious input that comes as part of a bad link mishandled on server side?",
@@ -969,6 +1031,7 @@ const MockDataWebSecurity = [
     correctAnswer: "Reflected XSS",
     category: "Web security",
     points: 400,
+    image: Web400_2,
     },
     {
     questionText: "Which type of XSS attack involves malicious input that comes as part of a bad link mishandled on client side?",
@@ -983,6 +1046,7 @@ const MockDataWebSecurity = [
     correctAnswer: "Visiting a compromised website while logged in to a target site",
     category: "Web security",
     points: 1000,
+    image: Web1000_2,
     }
 
 ]
@@ -994,6 +1058,7 @@ const MockDataCryptography = [
     correctAnswer: "Locking",
     category: "Public Key Cryptography",
     points: 100,
+    image: Crypto100,
     },
     {
     questionText: "Which encryption method involves a pair of keys, one for locking and one for unlocking?",
@@ -1001,6 +1066,7 @@ const MockDataCryptography = [
     correctAnswer: "Public-key encryption",
     category: "Public Key Cryptography",
     points: 200,
+    image: Crypto200,
     },
     {
     questionText: "What type of key is kept secret in public-key encryption?",
@@ -1015,6 +1081,7 @@ const MockDataCryptography = [
     correctAnswer: "Public key ciphers are much slower than symmetric ciphers",
     category: "Public Key Cryptography",
     points: 800,
+    image: Crypto800,
     },
     {
     questionText: "What role does the public key encryption play in a hybrid cryptosystem during secure communication?",
@@ -1022,6 +1089,7 @@ const MockDataCryptography = [
     correctAnswer: "Decrypting the symmetric key",
     category: "Public Key Cryptography",
     points: 1000,
+    image: Crypto1000,
     },
     {
     questionText: "What does a cryptographic hash function primarily produce when given an input message?",
@@ -1029,6 +1097,7 @@ const MockDataCryptography = [
     correctAnswer: "Message digest",
     category: "Transport Layer Security",
     points: 100,
+    image: Crypto100_2,
     },
     {
     questionText: "Does sending the message along with its digest guarantee that the message has not been modified?",
@@ -1036,6 +1105,7 @@ const MockDataCryptography = [
     correctAnswer: "No, unless the digest cannot be modified",
     category: "Transport Layer Security",
     points: 200,
+    image: Crypto200_2,
     },
     {
     questionText: "What is the purpose of attaching a Message Authentication Code (MAC) to each message?",
@@ -1043,6 +1113,7 @@ const MockDataCryptography = [
     correctAnswer: "Confirm integrity and authenticity of the message",
     category: "Transport Layer Security",
     points: 400,
+    image: Crypto400_2,
     },
     {
     questionText: "How does a Message Authentication Code (MAC) differ from a digest?",
@@ -1050,6 +1121,7 @@ const MockDataCryptography = [
     correctAnswer: "MAC can be computed and verified using a secret key, whereas a digest cannot",
     category: "Transport Layer Security",
     points: 800,
+    image: Crypto800_2,
     },
     {
     questionText: "Which functionalities does SSL/TLS primarily provide for secure communication?",
@@ -1057,8 +1129,13 @@ const MockDataCryptography = [
     correctAnswer: "Confidentiality, integrity, and authentication",
     category: "Transport Layer Security",
     points: 1000,
+    image: Crypto1000_2,
     }
 ]
+
+const MockDataAll = MockData.concat(MockDataSecurity).concat(MockDataLinux).concat(MockDataPasswords).concat(mockDataPasswordStorage)
+  .concat(MockDataAutherization).concat(MockDataAuthentication).concat(MockDataMalware).concat(MockquizDataDigitalSignatures).concat(MockquizDataPKI)
+  .concat(MockDataWebSecurity).concat(MockDataCryptography).sort((a, b) => 0.5 - Math.random());
 
   return (
     <BrowserRouter>
@@ -1076,6 +1153,7 @@ const MockDataCryptography = [
       <Route path="/PKI" element={<Quiz quizData = {MockquizDataPKI}/>}/>
       <Route path="/WebSecurity" element={<Quiz quizData = {MockDataWebSecurity}/>}/>
       <Route path="/Cryptography" element={<Quiz quizData = {MockDataCryptography}/>}/>
+      <Route path="/All" element={<Quiz quizData = {MockDataAll}/>}/>
     </Routes>
     </BrowserRouter>
   );
