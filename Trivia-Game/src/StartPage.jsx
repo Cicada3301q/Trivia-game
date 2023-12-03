@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Stack } from "@mui/material";
 import Quiz from './Quiz';
+import { Link } from "react-router-dom";
 //import { useHistory } from "react-router-dom";
 
 function App() {
@@ -29,16 +30,16 @@ function App() {
           spacing={2}
         >
           {options.map((option, index) => (
+            // eslint-disable-next-line react/jsx-key
+            <Link to={option.category}>
             <Button
               key={index}
               size="medium"
               variant="contained"
-              onClick={() => {
-                window.location.href=option.category
-              }}
             >
               {option.label}
             </Button>
+            </Link>
           ))}
           {/* <Quiz quizData={quizData} /> */}
         </Stack>
