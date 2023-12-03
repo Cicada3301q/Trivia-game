@@ -5,17 +5,18 @@ import Quiz from './Quiz';
 
 function App() {
     const options = [
-      { label: "Computer Representation of Data", category: "/Comp-data" },
       { label: "Security", category: "/Security" },
       { label: "Passwords", category: "/Passwords" },
       { label: "Password Storage", category: "/PasswordsStorage" },
       { label: "Authorization", category: "/Authorization" },
+      { label: "Linux", category: "/Linux" },
+      { label: "Computer Representation of Data", category: "/Comp-data" },
+      { label: "Malware", category: "/Malware" },
+      { label: "Cryptography", category: "/Cryptography" },
       { label: "Digital Signatures", category: "/Digital-Signatures" },
       { label: "Public Key Infrastructure", category: "/PKI" },
-      { label: "Linux", category: "/Linux" },
-      { label: "Malware", category: "/Malware" },
       { label: "Web Security", category: "/WebSecurity" },
-      { label: "Cryptography", category: "/Cryptography" },
+      { label: "Play All", category: "/All" },
     ];
   
     return (
