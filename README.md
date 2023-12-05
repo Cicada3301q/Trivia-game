@@ -44,7 +44,7 @@ This trivia game was developed by Quenten Welch, Harrison Drew, Tyler Nguyen, Ar
 ## Installation
 
 1. Clone the repository:
-git clone https://github.com/your-username/info-security-trivia-game.git](https://github.com/Cicada3301q/Trivia-game
+git clone https://github.com/Cicada3301q/Trivia-game
 
 2. Navigate to the project directory:
 cd info-security-trivia-game
