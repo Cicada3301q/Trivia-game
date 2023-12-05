@@ -27,7 +27,8 @@ Playing the Information Security Trivia Game is an engaging way to test your kno
    - Have fun exploring information security topics while testing and expanding your expertise!
 
 Get ready to immerse yourself in the world of information security with this interactive trivia game!
-
+You can follow the instructions below to install the game and play on your own machine or play our deployed game from your favorite web browser here:
+http://cicada-trivia-game.s3-website-us-east-1.amazonaws.com/
 
 ## Credits
 
