@@ -22,6 +22,7 @@ Playing the Information Security Trivia Game is an engaging way to test your kno
    
 5. **Play Again**:
    - Feel free to play again by navigating back to the start page and selecting another category to further enhance your knowledge.
+   - You will also have the option to continue on in study mode! We will still track your points and your guesses but you there is no game over condition.
 
 6. **Enjoy Learning!**:
    - Have fun exploring information security topics while testing and expanding your expertise!
