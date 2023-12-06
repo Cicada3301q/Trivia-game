@@ -76,7 +76,11 @@ button.incorrect {
     margin-top: 20px;
     padding: 12px 40px;
     font-size: 18px;
-    background-color: #17a2b8; /* Next button background color */
+    background-color: #ab17b8; /* Next button background color */
+  }
+
+  button.next-btn:hover {
+    background-color: #73117c;
   }
 
   .counter {

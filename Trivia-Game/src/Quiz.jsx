@@ -53,6 +53,11 @@ function Quiz({ quizData }) {
     setGameEnded(true); // Add this state using useState
   };
 
+  const returnHome = () => {
+    //Return home
+    window.location.href = '..';
+  };
+
   const handleNextQuestion = () => {
     // Clear selected answer and message
     setSelectedAnswer(null);
@@ -102,7 +107,8 @@ function Quiz({ quizData }) {
             ))}
           </ul>
           {message && <p className="message">{message}</p>}
-          <button onClick={handleNextQuestion}>Next Question</button>
+          <button className="next-btn" onClick={returnHome}>Return Home</button>
+          <button className="next-btn" onClick={handleNextQuestion}>Next Question</button>
           <div className="counter">
             <p className="correct">Correct Guesses: {correctCount}</p>
             <p className="incorrect">Incorrect Guesses: {incorrectCount}</p>
